@@ -41,10 +41,8 @@ docker run -it -p 8000:8000 barebones
    Access the container by typing in either `boot2docker ip` or
    `localhost` into the browser's URL bar. (ex: `localhost:8000`)
 2. [getParam](https://hackage.haskell.org/package/snap-core-0.9.6.3/docs/Snap-Core.html#v:getParam)
-3.
-
-We can add a handler to the end of the chain that has no
-routing restrictions:
+3. We can add a handler to the end of the chain that has no
+   routing restrictions:
 
 ```haskell
 site :: Snap ()
