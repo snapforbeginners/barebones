@@ -1,0 +1,2 @@
+:m Control.Applicative Snap.Core Snap.Util.FileServe Snap.Http.Server Data.ByteString
+:set prompt "*Main> "
