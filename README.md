@@ -46,7 +46,7 @@ docker run -it -p 8000:8000 barebones
 We can add a handler to the end of the chain that has no
 routing restrictions:
 
-```
+```haskell
 site :: Snap ()
 site =
     ifTop (writeBS "hello world") <|>
