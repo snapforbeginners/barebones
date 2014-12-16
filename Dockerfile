@@ -17,10 +17,13 @@ RUN cd /opt/server && cabal install
 
 # Add production assets and run application
 
-ADD ./log /opt/server/log
 ADD ./static /opt/server/static
 ADD ./.ghci /opt/server/.ghci
 
 WORKDIR /opt/server
 
-CMD ["/opt/server/dist/build/site/site"]
+# put logs somewhere
+RUN mkdir /var/log/barebones
+
+# default command to run
+CMD ["/opt/server/dist/build/site/site", "--access-log", "/var/log/barebones/access.log", "--error-log", "/var/log/barebones/error.log"]
